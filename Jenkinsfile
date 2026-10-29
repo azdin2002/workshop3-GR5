@@ -14,7 +14,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh 'mvn -B sonar:sonar -Dsonar.projectKey=workshop-sast -Dsonar.projectName=workshop-sast'
+                    sh 'mvn -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=workshop-sast -Dsonar.projectName=workshop-sast'
                 }
             }
         }
