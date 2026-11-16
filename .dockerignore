@@ -1,0 +1,7 @@
+.git
+.idea
+*.iml
+src
+*.md
+semgrep-report.json
+trivy-*
